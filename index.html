@@ -20,86 +20,132 @@
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body class="overflow-x-hidden">
-    <header>
-      <nav>
+    <header class="py-8 w-11/12 mx-auto">
+      <nav class="flex items-center justify-between">
         <img src="./images/logo-bookmark.svg" alt="logo" />
-        <ul>
+        <img src="./images/icon-hamburger.svg" alt="" />
+        <ul class="flex flex-col gap-5 uppercase fixed py-7 bg-slate-100/30 backdrop-blur-0">
+          <img src="./images/icon-close.svg" alt="" />
           <li><a href="#">Features</a></li>
           <li><a href="#">Pricing</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">Login</a></li>
+          <li>
+            <a
+              href="#"
+              class="py-3 px-8 font-medium bg-rose-900 text-slate-200 rounded-md uppercase"
+              >Login</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero flex flex-col-reverse gap-8 w-11/12 mx-auto">
       <div>
-        <h1>A Simple Bookmark Manager</h1>
-        <p>
+        <h1 class="font-bold text-2xl text-center">
+          A Simple Bookmark Manager
+        </h1>
+        <p class="text-slate-500 text-center my-4">
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
-        <button>Get it on Chrome</button>
-        <button>Get it on Firefox</button>
+        <div class="flex items-center justify-center gap-3">
+          <button class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md">
+            Get it on Chrome
+          </button>
+          <button
+            class="p-3 font-medium bg-slate-100 text-slate-700 rounded-md shadow-md"
+          >
+            Get it on Firefox
+          </button>
+        </div>
       </div>
       <img src="./images/illustration-hero.svg" alt="" />
     </section>
 
     <main>
-      <section class="features">
-        <h2>Features</h2>
-        <p>
+      <section class="features mx-auto w-11/12 py-6">
+        <h2 class="font-semibold text-xl text-center">Features</h2>
+        <p class="text-slate-500 text-center">
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
         </p>
 
-        <ul>
-          <li><a href="#">Simple Bookmarking</a></li>
-          <li><a href="#">Speedy Searching</a></li>
-          <li><a href="#">Easy Sharing</a></li>
+        <ul class="flex flex-col items-center mt-5 mb-11">
+          <li class="py-3 border-t border-slate-200">
+            <a href="#" class="text-slate-600">Simple Bookmarking</a>
+          </li>
+          <li class="py-3 border-y border-slate-200">
+            <a href="#" class="text-slate-600">Speedy Searching</a>
+          </li>
+          <li class="py-3 border-b border-slate-200">
+            <a href="#" class="text-slate-600">Easy Sharing</a>
+          </li>
         </ul>
 
         <div class="tab" id="tab-1">
           <img src="./images/illustration-features-tab-1.svg" alt="" />
-          <div>
-            <h3>Bookmark in one click</h3>
+          <div class="mt-7">
+            <h3 class="font-semibold text-lg text-center mb-3">
+              Bookmark in one click
+            </h3>
 
-            <p>
+            <p class="text-slate-500 text-center">
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
               favourite sites.
             </p>
 
-            <button>More Info</button>
+            <button
+              class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md hidden"
+            >
+              More Info
+            </button>
           </div>
         </div>
         <div class="tab" id="tab-2">
           <img src="./images/illustration-features-tab-2.svg" alt="" />
-          <div>
-            <h3>Intelligent search</h3>
-            <p>
+          <div class="mt-7">
+            <h3 class="font-semibold text-lg text-center mb-3">
+              Intelligent search
+            </h3>
+            <p class="text-slate-500 text-center">
               Our powerful search feature will help you find saved sites in no
               time at all. No need to trawl through all of your bookmarks.
             </p>
-            <button>More Info</button>
+            <button
+              class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md hidden"
+            >
+              More Info
+            </button>
           </div>
         </div>
         <div class="tab" id="tab-3">
           <img src="./images/illustration-features-tab-3.svg" alt="" />
-          <div>
-            <h3>Share your bookmarks</h3>
-            <p>
+          <div class="mt-7">
+            <h3 class="font-semibold text-lg text-center mb-3">
+              Share your bookmarks
+            </h3>
+            <p class="text-slate-500 text-center">
               Easily share your bookmarks and collections with others. Create a
               shareable link that you can send at the click of a button.
             </p>
-            <button>More Info</button>
+            <button
+              class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md hidden"
+            >
+              More Info
+            </button>
           </div>
         </div>
       </section>
       <section class="extensions py-7">
-        <div class="w-11/12 mx-auto flex flex-col gap-3 items-center justify-center">
-          <h2 class="text-center text-xl font-semibold">Download the extension</h2>
+        <div
+          class="w-11/12 mx-auto flex flex-col gap-3 items-center justify-center"
+        >
+          <h2 class="text-center text-xl font-semibold">
+            Download the extension
+          </h2>
           <p class="text-slate-500">
             We’ve got more browsers in the pipeline. Please do let us know if
             you’ve got a favourite you’d like us to prioritize.
@@ -288,4 +334,3 @@
     </footer>
   </body>
 </html>
-<!-- flex flex-col gap-3 items-center justify-center -->
