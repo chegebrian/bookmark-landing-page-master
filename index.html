@@ -17,18 +17,27 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body class="overflow-x-hidden">
     <header class="py-8 w-11/12 mx-auto">
       <nav class="flex items-center justify-between">
         <img src="./images/logo-bookmark.svg" alt="logo" />
-        <img src="./images/icon-hamburger.svg" alt="" />
-        <ul class="flex flex-col gap-5 uppercase fixed py-7 bg-slate-100/30 backdrop-blur-0">
-          <img src="./images/icon-close.svg" alt="" />
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
+        <img src="./images/icon-hamburger.svg" alt="" class="cursor-pointer open-menu" />
+        <ul
+          class="nav-elements flex flex-col gap-5 uppercase bg-slate-100/30 backdrop-blur-sm min-w-full min-h-[60vh] py-8 px-11 fixed mt-80 translate-x-full"
+        >
+          <svg class="text-slate-900 fill-current cursor-pointer ml-auto close-menu
+          " xmlns="http://www.w3.org/2000/svg" width="17" height="15">
+            <path
+              fill-rule="evenodd"
+              d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"
+            />
+          </svg>
+          <li><a href="#" class=" font-semibold text-xl">Features</a></li>
+          <li><a href="#" class=" font-semibold text-xl">Pricing</a></li>
+          <li><a href="#" class=" font-semibold text-xl">Contact</a></li>
           <li>
             <a
               href="#"
@@ -73,14 +82,14 @@
         </p>
 
         <ul class="flex flex-col items-center mt-5 mb-11">
-          <li class="py-3 border-t border-slate-200">
-            <a href="#" class="text-slate-600">Simple Bookmarking</a>
+          <li class="py-3 border-t border-slate-200 tab-link">
+            <a href="#tab1" class="text-slate-600">Simple Bookmarking</a>
           </li>
-          <li class="py-3 border-y border-slate-200">
-            <a href="#" class="text-slate-600">Speedy Searching</a>
+          <li class="py-3 border-y border-slate-200 tab-link">
+            <a href="#tab-2" class="text-slate-600">Speedy Searching</a>
           </li>
-          <li class="py-3 border-b border-slate-200">
-            <a href="#" class="text-slate-600">Easy Sharing</a>
+          <li class="py-3 border-b border-slate-200 tab-link">
+            <a href="#tab-3" class="text-slate-600">Easy Sharing</a>
           </li>
         </ul>
 
@@ -104,7 +113,7 @@
             </button>
           </div>
         </div>
-        <div class="tab" id="tab-2">
+        <div class="tab hidden" id="tab-2">
           <img src="./images/illustration-features-tab-2.svg" alt="" />
           <div class="mt-7">
             <h3 class="font-semibold text-lg text-center mb-3">
@@ -121,7 +130,7 @@
             </button>
           </div>
         </div>
-        <div class="tab" id="tab-3">
+        <div class="tab hidden" id="tab-3">
           <img src="./images/illustration-features-tab-3.svg" alt="" />
           <div class="mt-7">
             <h3 class="font-semibold text-lg text-center mb-3">
