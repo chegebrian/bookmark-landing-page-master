@@ -24,20 +24,34 @@
     <header class="py-8 w-11/12 mx-auto">
       <nav class="flex items-center justify-between">
         <img src="./images/logo-bookmark.svg" alt="logo" />
-        <img src="./images/icon-hamburger.svg" alt="" class="cursor-pointer open-menu" />
+        <img
+          src="./images/icon-hamburger.svg"
+          alt=""
+          class="cursor-pointer open-menu sm:hidden"
+        />
         <ul
-          class="nav-elements flex flex-col gap-5 uppercase bg-slate-100/30 backdrop-blur-sm min-w-full min-h-[60vh] py-8 px-11 fixed mt-80 translate-x-full"
+          class="nav-elements flex flex-col gap-5 uppercase bg-slate-100/30 backdrop-blur-sm min-w-full min-h-[60vh] py-8 px-11 fixed mt-80 translate-x-full sm:translate-x-0 sm:flex-row sm:min-h-0 sm:min-w-0 sm:relative sm:mt-0 sm:bg-white sm:backdrop-blur-0 sm:py-0 sm:px-0"
         >
-          <svg class="text-slate-900 fill-current cursor-pointer ml-auto close-menu
-          " xmlns="http://www.w3.org/2000/svg" width="17" height="15">
+          <svg
+            class="text-slate-900 fill-current cursor-pointer ml-auto close-menu sm:hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="15"
+          >
             <path
               fill-rule="evenodd"
               d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"
             />
           </svg>
-          <li><a href="#" class=" font-semibold text-xl">Features</a></li>
-          <li><a href="#" class=" font-semibold text-xl">Pricing</a></li>
-          <li><a href="#" class=" font-semibold text-xl">Contact</a></li>
+          <li>
+            <a href="#" class="font-semibold text-xl sm:text-base">Features</a>
+          </li>
+          <li>
+            <a href="#" class="font-semibold text-xl sm:text-base">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="font-semibold text-xl sm:text-base">Contact</a>
+          </li>
           <li>
             <a
               href="#"
@@ -49,7 +63,9 @@
       </nav>
     </header>
 
-    <section class="hero flex flex-col-reverse gap-8 w-11/12 mx-auto">
+    <section
+      class="hero flex flex-col-reverse gap-8 w-11/12 mx-auto md:flex-row md:items-center"
+    >
       <div>
         <h1 class="font-bold text-2xl text-center">
           A Simple Bookmark Manager
@@ -69,7 +85,7 @@
           </button>
         </div>
       </div>
-      <img src="./images/illustration-hero.svg" alt="" />
+      <img src="./images/illustration-hero.svg" alt="" class="md:w-2/4" />
     </section>
 
     <main>
@@ -81,70 +97,90 @@
           them on the go.
         </p>
 
-        <ul class="flex flex-col items-center mt-5 mb-11">
-          <li class="py-3 border-t border-slate-200 tab-link">
+        <ul
+          class="flex flex-col items-center mt-5 mb-11 sm:flex-row sm:gap-6 sm:justify-center sm:border-b sm:border-slate-200"
+        >
+          <li class="py-3 border-t border-slate-200 tab-link sm:border-0">
             <a href="#tab1" class="text-slate-600">Simple Bookmarking</a>
           </li>
-          <li class="py-3 border-y border-slate-200 tab-link">
+          <li class="py-3 border-y border-slate-200 tab-link sm:border-0">
             <a href="#tab-2" class="text-slate-600">Speedy Searching</a>
           </li>
-          <li class="py-3 border-b border-slate-200 tab-link">
+          <li class="py-3 border-b border-slate-200 tab-link sm:border-0">
             <a href="#tab-3" class="text-slate-600">Easy Sharing</a>
           </li>
         </ul>
 
-        <div class="tab" id="tab-1">
-          <img src="./images/illustration-features-tab-1.svg" alt="" />
-          <div class="mt-7">
-            <h3 class="font-semibold text-lg text-center mb-3">
-              Bookmark in one click
-            </h3>
+        <div class="tab" id="tab-1 ">
+          <div class="md:flex md:items-center md:gap-8">
+            <img
+              src="./images/illustration-features-tab-1.svg"
+              alt=""
+              class="mx-auto md:w-2/4 md:mx-0"
+            />
+            <div class="mt-7 md:mt-0">
+              <h3 class="font-semibold text-lg text-center mb-3 md:text-left">
+                Bookmark in one click
+              </h3>
 
-            <p class="text-slate-500 text-center">
-              Organize your bookmarks however you like. Our simple drag-and-drop
-              interface gives you complete control over how you manage your
-              favourite sites.
-            </p>
+              <p class="text-slate-500 text-center md:text-left md:mb-3">
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </p>
 
-            <button
-              class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md hidden"
-            >
-              More Info
-            </button>
+              <button
+                class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md hidden md:block"
+              >
+                More Info
+              </button>
+            </div>
           </div>
         </div>
         <div class="tab hidden" id="tab-2">
-          <img src="./images/illustration-features-tab-2.svg" alt="" />
-          <div class="mt-7">
-            <h3 class="font-semibold text-lg text-center mb-3">
-              Intelligent search
-            </h3>
-            <p class="text-slate-500 text-center">
-              Our powerful search feature will help you find saved sites in no
-              time at all. No need to trawl through all of your bookmarks.
-            </p>
-            <button
-              class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md hidden"
-            >
-              More Info
-            </button>
+          <div class="md:flex md:items-center md:gap-8">
+            <img
+              src="./images/illustration-features-tab-2.svg"
+              alt=""
+              class="mx-auto md:w-2/4 md:mx-0"
+            />
+            <div class="mt-7">
+              <h3 class="font-semibold text-lg text-center mb-3 md:text-left">
+                Intelligent search
+              </h3>
+              <p class="text-slate-500 text-center md:text-left md:mb-3">
+                Our powerful search feature will help you find saved sites in no
+                time at all. No need to trawl through all of your bookmarks.
+              </p>
+              <button
+                class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md hidden md:block"
+              >
+                More Info
+              </button>
+            </div>
           </div>
         </div>
         <div class="tab hidden" id="tab-3">
-          <img src="./images/illustration-features-tab-3.svg" alt="" />
-          <div class="mt-7">
-            <h3 class="font-semibold text-lg text-center mb-3">
-              Share your bookmarks
-            </h3>
-            <p class="text-slate-500 text-center">
-              Easily share your bookmarks and collections with others. Create a
-              shareable link that you can send at the click of a button.
-            </p>
-            <button
-              class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md hidden"
-            >
-              More Info
-            </button>
+          <div class="md:flex md:items-center md:gap-8">
+            <img
+              src="./images/illustration-features-tab-3.svg"
+              alt=""
+              class="mx-auto md:w-2/4 md:mx-0"
+            />
+            <div class="mt-7">
+              <h3 class="font-semibold text-lg text-center mb-3 md:text-left">
+                Share your bookmarks
+              </h3>
+              <p class="text-slate-500 text-center md:text-left md:mb-3">
+                Easily share your bookmarks and collections with others. Create
+                a shareable link that you can send at the click of a button.
+              </p>
+              <button
+                class="p-3 font-medium bg-blue-600 text-slate-200 rounded-md hidden md:block"
+              >
+                More Info
+              </button>
+            </div>
           </div>
         </div>
       </section>
